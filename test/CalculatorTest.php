@@ -11,7 +11,15 @@ class CalculatorTest extends PHPUnit_Framework_TestCase
     {
         $calc = new Calculator;
 
-        $this->assertEquals(4, $calc->add(2,2));
+        $values = [
+            [2, 2, 4],
+            [2.5, 2.5, 5],
+            [-3, 1, -2]
+        ];
+
+        foreach ($values as $numbers) {
+            $this->assertEquals($numbers[2], $calc->add($numbers[0], $numbers[1]));
+        }
     }
 
     /**
