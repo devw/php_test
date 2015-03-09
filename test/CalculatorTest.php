@@ -1,6 +1,6 @@
 <?php
 
-require 'app/libraries/Calculator.php'; 
+require 'vendor/autoload.php'; 
 
 /**
 * CalculatorTest Class
